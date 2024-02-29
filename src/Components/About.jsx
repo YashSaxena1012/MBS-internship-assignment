@@ -6,7 +6,7 @@ function About() {
     Aos.init();
   },[])
   return (
-    <div className=" mt-5 md:-mt-5 mb-3 lg:-mb-10 lg:-mt-24 text-white flex flex-col md:flex-row font-playfair bg-black bg-opacity-65 w-full items-center " data-aos="fade-up">
+    <div className=" mt-5 md:-mt-5 mb-3 lg:-mb-10 lg:-mt-24 text-white flex flex-col md:flex-row font-playfair bg-black bg-opacity-65 w-full items-center " data-aos="fade-up" id="About">
       <div className="text-3xl font-bold text-center rounded-lg w-full md:w-2/6" >About Us
         </div>
         <div className="text-lg leading-loose font-bold p-4 w-full md:w-4/6">

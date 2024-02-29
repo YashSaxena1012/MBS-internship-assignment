@@ -6,6 +6,7 @@
   body{
     background-color: black;
     color: azure;
+    scroll-behavior: smooth;
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;

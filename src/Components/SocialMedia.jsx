@@ -64,7 +64,7 @@ const TestimonialSlider = () => {
   };
   const imageArray=[srimg1,srimg2,srimg3,srimg4,srimg5];
   return (
-    <div className="bg-gray-900 opacity-90 p-4">
+    <div className="bg-gray-900 opacity-90 p-4" id="Socials">
     <div className="mt-4 w-full md:w-3/4  mx-auto text-black">
       <h2 className="text-3xl font-playfair mb-4 text-white">Social Media Testimonials</h2>
       <Slider {...settings} className="mb-10 group group-hover:blur-md">

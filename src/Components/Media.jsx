@@ -72,7 +72,7 @@ function Media() {
 
   return (
     <>
-      <div className="text-center container h-full flex flex-col" name="media">
+      <div className="text-center container h-full flex flex-col" id="Media">
         <h2 className="m-4 text-2xl">Other Trending Games</h2>
         <div
           ref={imagesRef}

@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Swal from "sweetalert2"
 import skaterpark from '../assets/Images/skaterpark.webp';
 import community from '../assets/Images/community.jpeg';
 import custom from '../assets/Images/custom.jpg';
@@ -36,8 +37,26 @@ const News = () => {
         },
     ];
 
+    const [mail,setMail]=useState("")
+    const handleSubmit=()=>{
+        if (
+            mail === "" 
+          ) {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Please enter the email",
+            });
+            return;
+          }
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent Successfully",
+          });
+          setMail("")
+    }
     return (
-        <div className="bg-gray-900 opacity-90 py-16 sm:py-24 lg:py-32 font-playfair">
+        <div className="bg-gray-900 opacity-90 py-16 sm:py-24 lg:py-32 font-playfair" id="News">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col sm:flex-row gap-4 justify-around">
             <div className='flex gap-8 w-full overflow-x-auto no-scrollbar p-4' data-aos="fade-right">
                 {news.map((item) => {
@@ -57,8 +76,8 @@ const News = () => {
                 <p className="mt-4 text-lg leading-8 text-gray-300">We're still working on it! The skate. newsletter is the best way to stay up to date on all the latest skate. news, behind-the-scenes content, updates and more (including other EA news, products, events, and promotions) by email.</p>
                 <div className="mt-6 flex max-w-md gap-x-4">
                     <label htmlFor="email-address" className="sr-only">Email address</label>
-                    <input id="email-address" name="email" type="email" autoComplete="email" required className="flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white focus:ring-2 focus:ring-indigo-500 sm:text-sm" placeholder="Enter your email" />
-                    <button type="submit" className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-400">Subscribe</button>
+                    <input id="email-address" name="email" value={mail} onChange={(e)=>setMail(e.target.value)} type="email" autoComplete="email" required className="flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white focus:ring-2 focus:ring-indigo-500 sm:text-sm" placeholder="Enter your email" />
+                    <button type="submit" onClick={handleSubmit} className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-400">Subscribe</button>
                 </div>
             </div>
         </div>

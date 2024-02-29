@@ -51,7 +51,7 @@ const ContactUs = () => {
     });
   };
   return (
-    <div className="max-w-6xl mx-auto bg-gray-900 rounded-lg opacity-90" data-aos="fade-up">
+    <div className="max-w-6xl mx-auto bg-gray-900 rounded-lg opacity-90" data-aos="fade-up" id="Contact Us">
       <div className="grid md:grid-cols-2 items-center gap-16 sm:p-10 p-4 font-playfair">
         <div>
           <h1 className="text-4xl font-extrabold text-white">Get in Touch</h1>

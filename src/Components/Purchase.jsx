@@ -8,7 +8,7 @@ function Purchase() {
         Aos.init();
     })
     return (
-    <div className="pt-5 bg-gray-900 opacity-90" id="pricing">
+    <div className="pt-5 bg-gray-900 opacity-90" id="Purchase">
       <div className="mx-auto pb-20 mt-4 px-6 lg:px-8">
         <div className="mx-auto text-center" data-aos="fade-up">
           <h1 className=" font-semibold leading-7 text-xl text-indigo-400">Pricing</h1>
