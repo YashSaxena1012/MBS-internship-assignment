@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom"
 import logo from "../assets/Images/logo.jpg";
 import { IoMdMenu } from "react-icons/io";
 import { RxCross1 } from "react-icons/rx";
